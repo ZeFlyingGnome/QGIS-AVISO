@@ -64,6 +64,12 @@ jobs:
             fi
 
           done < changed_files.tsv
+          
+        - name: Debug changed files
+          run: |
+            echo "=== changed_files.tsv ==="
+            cat changed_files.tsv
+            echo "========================="          
 
       - name: Validate changed airports
         id: validate
