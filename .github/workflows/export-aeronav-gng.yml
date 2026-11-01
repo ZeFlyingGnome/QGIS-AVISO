@@ -3,7 +3,7 @@ name: Export AVISO to AeroNav GNG
 on:
   push:
     branches:
-      - main
+      - test
     paths:
       - ".exports/QGIS-geoJSON/**/*.geojson"
 
