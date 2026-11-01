@@ -28,13 +28,15 @@ jobs:
       # The validation script is always executed from here.
       - name: Checkout trusted base
         uses: actions/checkout@v6
+        with:
+          path: base
+          persist-credentials: false
 
       # Checkout the contributor's PR separately.
       # Nothing executable from this directory must be run.
       - name: Checkout pull request data
         uses: actions/checkout@v6
         with:
-          ref: refs/pull/${{ github.event.pull_request.number }}/head
           path: pr
           persist-credentials: false
 
